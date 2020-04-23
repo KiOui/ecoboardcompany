@@ -1,0 +1,338 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+} 
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+  width: 100%;
+}
+
+h3 {
+	color:black;
+	font-weight: lighter;
+}
+
+div.productBlock{
+	width:39%;
+	height:300px;
+	background-color: white;
+	margin:25px 5% 25px 5%;
+	border-bottom-width: 2px;
+	border-bottom: solid #303030;
+	border-right: solid #303030;
+	border-right-width: 2px;
+	display: inline-block;
+
+}
+
+
+div.productBlock h1{
+	width:100%;
+	color:#4A7D13;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+div.productBlock a{
+	text-decoration-line: none;
+	color:#303030;
+}
+
+div.productBlock a:hover{ 
+	text-decoration-line: ;
+	color:black;
+}
+
+div.productBlock a:visited{ 
+	color:black;
+}
+
+div.productBlock h3{
+	margin-left: 3%;
+
+}
+
+div.productBlockText{
+	width:50%;
+	float:right;
+	color:black;
+}
+
+
+div.productBlockImg {
+	max-height:200px;
+	width:39%;
+	float:left;
+	margin-left: 6%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+div.lapBeschrijving {
+	width:60%;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+
+
+
+
+div.productenImgBlocks {
+	width:100%;
+	background-color: white;
+	height: 500px;
+	position: relative;
+}
+
+.button {
+  margin-top: 50px;
+  background-color: #4A7D13;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 30px;
+  cursor: pointer;  
+  border-radius: 5px;
+  height: 20px;
+  width: 100px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: black;
+}
+
+/* */
+
+div.blockTextBanner {
+  float:right;
+  background-color: #303030;
+  margin: 30px;
+  opacity: 0.85;
+  max-width: 400px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (min-width: 1024px) {
+    div.blockTextBanner h1{
+      font-size: 28pt;
+    }
+
+    div.blockTextBanner p{
+      font-size: 16pt;
+    }
+}
+
+div.blockTextBanner h1{
+  color:white;
+  margin: 10%;
+}
+
+div.blockTextBanner p{
+  color:white;
+  margin: 10%;
+}
+
+@media only screen and (max-width: 1024px) {
+    div.blockTextBanner h1 {
+      font-size: 28pt;
+    }
+
+    div.blockTextBanner p {
+      font-size: 13pt;
+    }
+}
+
+
+div.bannerBlockText {
+  background-image: url("../img/forest.jpg");
+  width:100%;
+  height: 700px;
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* */
+
+
+.button2 {
+	margin-top: 50px;
+    background-color: #4A7D13;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;	
+}
+
+
+
+#productenIsolatieText {
+	margin-top: 150px;
+	width:50%;
+	float: left;
+	margin-left: 10%;
+	text-align: center;
+}
+
+#productenIsolatieText h1{
+	color: #303030;
+	font-size: 33pt;
+}
+
+#productenIsolatieText p{
+	color: #303030;
+	font-size: 13pt;
+	max-width: 500px;
+	margin: auto;
+
+}
+
+div.productenImgBlocksHead {
+	width:100%;
+	background-color: white;
+	height: 750px;
+	position: relative;
+}
+
+.top-button {
+  background-color: #4A7D13;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;  
+  border-radius: 5px;
+  height: 20px;
+  width: 100px;
+  transition-duration: 0.4s;
+}
+
+.top-button:hover {
+	background-color: #303030;
+}
+
+.productenBouwen {
+	float: left;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	width: auto;
+}
+
+#productenBouwenText {
+	position: absolute;
+	bottom: 40px;
+	margin: auto;
+	text-align: center;
+	left: 0;
+	right: 0;
+	max-width: 300px;
+	background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+    background: rgba(255, 255, 255, 0.8);
+    min-width: 250px;
+}
+
+#productenBouwenText h1{
+	color: #303030;
+	font-size: 33pt;
+
+}
+
+#productenIsolatieText p{
+	color: #303030;
+	font-size: 15pt;
+}
+
+
+#TNMLogo {
+	height:100%;
+	width:100%;
+
+}
+
+#enecoLogo {
+	height:100%;
+	width: 100%;
+}
+
+#bannerHead {
+	width:100%;
+	height:175px;
+	background-color: #B8E488;
+}
+
+#bannerText {
+	text-align:center;
+	color:white;
+}
+
+#bannerText h1 {
+	margin-top: 75px;
+	vertical-align: middle;
+	display: inline-block;
+	font-size:60px;
+}
+
+
+div.side-arrow {
+  overflow: auto;
+  display: inline;
+}
+
+div.side-arrow:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+div.border {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* arrows */
+
+i.arrow {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    border: black;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

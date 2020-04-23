@@ -1,0 +1,35 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/css/header.css?v=1.0">
+<link rel="stylesheet" type="text/css" href="/fonts/fontAwesome/css/font-awesome.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110459600-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110459600-2');
+</script>
+
+ <header class="container scroller" id="nav_bar">
+  <label for="show-menu" id="get-total-height" class="show-menu-head"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></label>
+    <input type="checkbox" id="show-menu" role="button" class="master">
+  <a class="menu-link" href="/index.php">Home</a>
+  <div class="dropdown">
+    <label for="show-products" class="show-menu">Products</label>
+    <input type="checkbox" id="show-products" class="uncheck" role="button">
+    <button class="dropbtn no-link">Products</button>
+    <div class="dropdown-content">
+      <a href="/producten/standard/standard.php">Boardeco</a>
+    </div>
+  </div> 
+  <a class="menu-link" href="/news/news.php">News</a>
+  <a class="menu-link" href="/welcome/welcome.php">You are welcome!</a>
+  <a class="menu-link" href="/contact/contact.php">Contact us</a>
+</header>
+
+<button onclick="scrollToY(0, 5, 'easeInOutQuint');" id="topButton" title="Back to top"><i class="fa fa-arrow-up"></i></button>
+
+<script src="/js/checkboxes-header.js"></script>
+<script src="/js/scroll.js"></script>

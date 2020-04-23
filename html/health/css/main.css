@@ -1,0 +1,132 @@
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  position: relative;
+}
+
+h5 {
+  margin: 0;
+  font-size: 12pt;
+}
+
+div.content {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+div.large-block {
+  width: 100%;
+  display: inline-block;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+div.text-inside {
+  background-color: #303030;
+  width: 34%;
+  margin: auto;
+  opacity: 0.85;
+  margin-top: 200px;
+  display: inline-block;
+  min-width: 250px;
+  padding: 10px;
+  font-size: 33pt;
+  color: white;
+  max-width: 200px;
+}
+
+div.text-block {
+  background-color: #303030;
+  width: 34%;
+  margin: auto;
+  opacity: 0.85;
+  margin-top: 200px;
+  display: inline-block;
+  min-width: 250px;
+  padding: 10px;
+  font-size: 24pt;
+  color: white;
+  max-width: 200px;
+}
+
+div.large-image {
+  width: 100%;
+  display: inline-block;
+  height: 800px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; 
+}
+
+div.middle {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  text-align: center;
+}
+
+div.small-block {
+  width: 96%;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+  padding: 2%;
+  vertical-align: top;
+  max-width: calc(600px - 8%);
+}
+
+div.small-block img {
+  max-height: 600px;
+  width: 100%;
+  max-width: calc(600px - 8%);
+}
+
+div.small-block h1 {
+  text-align: left;
+  color: #4A7D13;
+}
+
+i.arrow:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+i.arrow {
+    border: solid #4A7D13;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    border: black;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

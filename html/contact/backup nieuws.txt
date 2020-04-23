@@ -1,0 +1,399 @@
+<div class="blocks">
+    <div class="left-text">
+    	<div class="discover">
+		    <div class="leftText">
+		        <h1 class="bigText">
+		            Ontdek onze producten
+		        </h1>
+		        <div class="side-arrow" onclick="window.location.href = '../producten/producten.php'">
+		            <i class="arrow right" style = "border-color: #4A7D13"></i>
+		        </div>  
+		    </div>
+		    <div class="right-image">
+		    	<img class="product" src="./img/imgBoardIso.jpeg"/>
+		    </div>
+		</div>
+    </div>
+    <div class="news-item">
+    	<h1 class="news-link" onclick="window.location.href = '../news/news.php';">
+            Nieuws Eco-boards
+        </h1>
+        <?php
+            $dataFileName = "shortItem.v";
+            $titleFileName = "title.v";
+            $imageDirName = "img";
+            $imageName = "header.jpg";
+            $dir = '../news/items';
+            $files = scandir($dir);
+            $path = '../news/news-page.php?item=';
+
+            function date_sort($a, $b) {
+                return strtotime($b) - strtotime($a);
+            }
+
+            usort($files, "date_sort");
+
+            $i = 0;
+            foreach ($files as $file) {
+                if ($i >= 1) {
+                    break;
+                }
+                if ($file != "." && $file != ".." && is_dir($dir.'/'.$file)) {
+                    $url = $path.$file;
+                    $file = $dir.'/'.$file;
+                    if (is_file($file.'/'.$dataFileName) && is_file($file.'/'.$titleFileName)) {
+                        $fh = fopen($file.'/'.$titleFileName, 'r');
+                        $title = fgets($fh);
+                        $date = fgets($fh);
+                        fclose($fh);
+
+                        $fh = fopen($file.'/'.$dataFileName, 'r');
+                        $item = fgets($fh);
+                        fclose($fh);
+
+                        echo('
+                            <div class="news-item-php">
+            
+                                <div class="bar-fullscreen-2" style="background-color: #cbcdd0;"></div>
+                                <div class="title-link">
+                                    <h1 class="title">
+                                        '
+                                        .$title.
+                                        '
+                                    </h1>
+                                    <div class="side-arrow" onclick="window.location.href = \''.$url.'\';">
+                                        <i class="arrow right" style = "border-color: #4A7D13"></i>
+                                    </div>
+                                    <p class="date">'.$date.'</p>
+                                </div>
+                                <p class="news-short">
+                                    '
+                                    .$item.
+                                    '
+                                </p>
+                            </div>
+                        ');
+                        $i++;
+                    }
+                }
+            }
+        ?>
+    </div>
+</div>
+
+
+
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  min-width: 400px;
+}
+
+p {
+	color:white;
+	margin: 0px;
+}
+
+h2 {
+	color:white;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 12pt;
+	font-weight: lighter;
+}
+div.textTeam h3{
+	color:white;
+}
+img{
+	display: block;
+}
+
+div.imgTextHead{
+	background-color: #303030;
+	height: 400px;
+}
+
+div.news-image {
+  width: 100%
+  height: 40px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.building {
+	float: left;
+	height: 100%;
+	display: inline-block;
+	background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/imgIndustrieweg.jpg");
+}
+
+div.imgText{
+	height:200px;
+	width:60%;
+}
+
+
+div.text {
+	padding: 5%;
+	width: 90%;
+}
+
+div.textHeadquarter{
+	max-height: 400px;
+	color:white;
+	display: inline-block;
+}
+
+@media only screen and (max-width: 700px) {
+	div.textHeadquarter {
+		width: 100%;
+		height: 50%;
+	}
+
+	div.imgTextHead {
+		height: auto;
+	}
+
+	div.text {
+		padding: 2%;
+		width: 96%;
+		padding-bottom: 6%;
+	}
+
+	div.building {
+		width: 100%;
+		height: 300px;
+	}
+}
+
+@media only screen and (min-width: 700px) {
+	div.textHeadquarter {
+		width: 55%;
+	}
+
+	div.building {
+		width: 45%;
+	}
+}
+
+div.blocks {
+  text-align: center;
+  overflow: auto;
+}
+
+div.side-arrow {
+  overflow: auto;
+  display: inline;
+}
+
+div.side-arrow:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+div.left-text {
+  position: relative;
+  float: left;
+  display: inline-block;
+}
+
+div.discover {
+  text-align: center;
+  color: #4A7D13;
+  width: 100%;
+}
+
+div.leftText {
+	width: 50%;
+	float: left;
+}
+
+div.news-item {
+	display: inline-block;
+	float: left;
+	padding: 2%;
+}
+
+@media only screen and (max-width: 1300px) {
+	div.discover {
+	  height: 250px;
+	}
+
+	div.left-text {
+		width: 90%;
+		padding: 5%;
+	}
+
+	div.leftText {
+	  height: 100px;
+	  margin-top: 75px;
+	  margin-bottom: 75px;
+	}
+
+	div.news-item {
+		width: 96%
+	}
+}
+
+@media only screen and (min-width: 1300px) {
+	div.discover {
+		height: 500px;
+	}
+
+	div.left-text {
+		width: 66%;
+		padding: 2%;
+		padding-bottom: 0%;
+	}
+
+	div.leftText {
+		height: 200px;
+		margin-top: 150px;
+		margin-bottom: 150px;
+	}
+
+	div.news-item {
+		width: 26%;
+	}
+}
+
+div.news-item-php {
+  display: inline-block;
+  width: 96%;
+  text-align: left;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+div.title-link {
+  width: 30%;
+  display: inline-block;
+  float: left;
+  min-width: 200px;
+}
+
+p.date {
+  color: #303030;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+p.news-short {
+  width: 70%;
+  float: left;
+  color: #303030;
+  margin-top: 20px;
+}
+
+div.field {
+  color: white;
+  text-align: left;
+  padding: 10%;
+}
+
+div.right-image {
+  width: 50%;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+
+h1.bigText {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.bar-fullscreen-2 {
+  height: 2px;
+  width: 100%;
+  background-color: #cbcdd0;
+}
+
+img.product {
+  max-width: 100%;
+  float: right;
+  max-height: 100%;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+div.border {
+    border: solid #B8E488;
+    border-width: 0 2px 2px 0;
+}
+
+h1.news-link {
+  text-align: left;
+  color: #4A7D13;
+  cursor: pointer;
+  width: 96%;
+  padding-left: 2%;
+  padding-right: 2%;
+  filter:alpha(opacity=0);
+  -webkit-transition:400ms ease;
+  -moz-transition:400ms ease;
+  -o-transition:400ms ease;
+  transition:400ms ease;
+}
+
+h1.news-link:hover {
+  opacity: 0.5;
+}
+
+div.side-arrow {
+  overflow: auto;
+  display: inline;
+  filter:alpha(opacity=0);
+  -webkit-transition:400ms ease;
+  -moz-transition:400ms ease;
+  -o-transition:400ms ease;
+  transition:400ms ease;
+}
+
+div.side-arrow:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+i.arrow {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    border: black;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

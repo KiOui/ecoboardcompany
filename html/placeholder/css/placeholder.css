@@ -1,0 +1,151 @@
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  position: relative;
+	background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 400px;
+  overflow: auto;
+}
+
+#logo {
+  position: absolute;
+  z-index: 10;
+  width: 200px;
+  right: 60px;
+}
+
+div.complete {
+  position: relative;
+  min-height: calc(100% - 20px);
+  width: calc(100% - 40px);
+  background-image: url("../img/board.jpg");
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+div.blockTextBanner {
+  position: relative;
+  max-width: 600px;
+  margin: 80px;
+  margin-bottom: 0;
+  min-width: 300px;
+  border: 10px solid rgba(255,255,255,0.5);
+}
+
+div.blockTextBanner h1{
+  color: #8DC155;
+  font-weight: bold;
+  margin: 30px;
+  font-size: 33pt;
+  text-align: left;
+}
+
+div.blockTextBanner p{
+  color:black;
+  font-size: 18pt;
+  margin: 30px;
+  text-align: left;
+}
+
+.button {
+  font-weight: bold;
+  margin-top: 50px;
+  background-color: #8DC155;
+  border: none;
+  color: white;
+  padding: 3%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16pt;
+  margin: 5%;
+  padding-left: 50px;
+  padding-right: 50px;
+  cursor: pointer;  
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: black;
+}
+
+div.border-element {
+    display: inline-block;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#eco {
+  position: relative;
+  margin-top: 200px;
+  margin-left: 80px;
+  height: 150px;
+}
+
+#img-plant {
+  position: absolute;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/leaf.png");
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  right: 200px;
+  top: 200px;
+  min-height: 600px;
+  min-width: 600px;
+}
+
+div.image-block {
+  position: relative;
+  float: right;
+  height: 100%;
+}
+
+@media screen and (max-width: 1500px){
+    #img-plant {
+      display: none;
+    }
+    .image-block {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+  div.blockTextBanner {
+    position: relative;
+    float: none;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+  }
+
+  #eco {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #logo {
+    display: none;
+  }
+}

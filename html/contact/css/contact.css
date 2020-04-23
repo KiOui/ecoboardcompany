@@ -1,0 +1,254 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  min-width: 400px;
+}
+
+p {
+	margin: 0px;
+}
+
+h2 {
+	color:white;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 12pt;
+	font-weight: lighter;
+}
+
+/* Header */
+
+div.showHeaderImage {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  height: 300px;
+  text-align: center;
+  font-size: 30pt;
+  background-image: url('../img/imgBannerBlock3.jpg');
+}
+
+div.text {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 30px);
+  max-width: 300px;
+  color: #303030;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: opacity 1.6s ease 0s;
+}
+
+div.text p {
+  margin: 0;
+  padding: 0;
+  transition: opacity 1.6s ease 0s;
+}
+
+img.logo {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  width: 20%;
+  max-width: 200px;
+  min-width: 140px;
+}
+/* -- */
+
+div.side-arrow {
+  overflow: auto;
+  display: inline;
+}
+
+div.side-arrow:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+div.left-text {
+  position: relative;
+  float: left;
+  display: inline-block;
+}
+
+div.form {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: bolder;
+  max-width: 1000px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #8DC155;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+filter:alpha(opacity=0);
+  -webkit-transition:400ms ease;
+  -moz-transition:400ms ease;
+  -o-transition:400ms ease;
+  transition: background-color 400ms ease 0s;
+}
+
+input[type=submit].subject {
+  height: 300px;
+}
+
+input[type=submit]:hover {
+    background-color:#303030;
+}
+
+div.bottom {
+  position: relative;
+  width: 100%;
+  background-image: url("../img/imgLocation.jpg");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.information {
+  position: absolute;
+  left: 0;  
+  right: 0;
+  top: 30px;
+  background-color: rgba(48,48,48,0.8);
+  padding: 20px;
+  text-align:center;
+  max-width: 600px;
+  margin: auto;
+}
+
+div.information p,h1{
+  color:white;
+  margin-top: 0px;
+
+}
+
+@media only screen and (max-width: 1300px) {
+	div.discover {
+	  height: 250px;
+	}
+
+	div.left-text {
+		width: 90%;
+		padding: 5%;
+	}
+
+	div.leftText {
+	  height: 100px;
+	  margin-top: 75px;
+	  margin-bottom: 75px;
+	}
+
+	div.news-item {
+		width: 96%
+	}
+}
+
+@media only screen and (min-width: 1300px) {
+	div.discover {
+		height: 500px;
+	}
+
+	div.left-text {
+		width: 66%;
+		padding: 2%;
+		padding-bottom: 0%;
+	}
+
+	div.leftText {
+		height: 200px;
+		margin-top: 150px;
+		margin-bottom: 150px;
+	}
+
+	div.news-item {
+		width: 26%;
+	}
+}
+
+div.side-arrow {
+  overflow: auto;
+  display: inline;
+  filter:alpha(opacity=0);
+  -webkit-transition:400ms ease;
+  -moz-transition:400ms ease;
+  -o-transition:400ms ease;
+  transition:400ms ease;
+}
+
+div.side-arrow:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+i.arrow {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    border: black;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
